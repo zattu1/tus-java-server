@@ -59,6 +59,9 @@ public class CorePatchRequestHandler extends AbstractRequestHandler {
             if (!uploadInfo.isUploadInProgress()) {
                 log.info("Upload with ID {} at location {} finished successfully",
                         uploadInfo.getId(), servletRequest.getRequestURI());
+                log.info("getPathInfo()", servletRequest.getPathInfo());
+                log.info("getContextPath()", servletRequest.getContextPath());
+                log.info("getServletPath()", servletRequest.getServletPath());
             }
         } else {
             log.error("The patch request handler could not find the upload for URL " + servletRequest.getRequestURI()
